@@ -8,14 +8,16 @@ let nam = ''
 
 const books = [];
 
-function Book(title, name) {
+function Book(title, name, node = null) {
     this.title = title;
     this.name = name;
+    this.node = node;
 }
 
 const addBook = (book) => {
+    let node = createBooksElements(book)
+    book.node = node
     books.push(book);
-    createBooksElements(book)
 };
 
 bookname.addEventListener('input', () => {
@@ -32,12 +34,15 @@ const createBooksElements = ({title , name})=> {
     const BookTitle = document.createElement('p');
     const BookWritter = document.createElement('p');
     const remove = document.createElement('button')
+    remove.innerHTML = 'Remove'
     remove.addEventListener('click', () => {
         books.forEach(book => {
             if (book.title === title && book.name === name) {
                 let i = books.indexOf(book)
 
+                Bookscontainer.removeChild(books[i].node)
                 books.splice(i,1)
+                stringfyForm()
             }
         })
     })
@@ -48,8 +53,10 @@ const createBooksElements = ({title , name})=> {
 
     Booksdiv.append(BookTitle, BookWritter);
     Bookscontainer.appendChild(Booksdiv);
-    Bookscontainer.appendChild(remove)
-    Bookscontainer.appendChild(line)
+    Booksdiv.appendChild(remove)
+    Booksdiv.appendChild(line)
+
+    return Booksdiv
 }
 
 books.forEach(createBooksElements)
@@ -57,6 +64,22 @@ books.forEach(createBooksElements)
 Form.onsubmit = (e) => {
     e.preventDefault();
     addBook(new Book(title, nam))
+    stringfyForm()
 };
-   
+  
+  const storeFrom = document.querySelector('form');
 
+  const stringfyForm = () => {
+    const data = JSON.stringify(books);
+    localStorage.setItem('books', data);
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const userInput = JSON.parse(localStorage.getItem('books'));
+    console.log(Object.entries(userInput))
+    // if (userInput !== null) {
+    //   bookname = userInput.title
+    //   writer = userInput.name
+    // }
+  });
+  

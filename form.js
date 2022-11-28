@@ -4,7 +4,7 @@ const bookname = Form['title'];
 const writer = Form['name'];
 
 let title ='' 
-let nam = ''
+let name = ''
 
 const books = [];
 
@@ -74,12 +74,21 @@ Form.onsubmit = (e) => {
     localStorage.setItem('books', data);
   };
 
+ 
   window.addEventListener('DOMContentLoaded', () => {
-    const userInput = JSON.parse(localStorage.getItem('books'));
-    console.log(Object.entries(userInput))
-    // if (userInput !== null) {
-    //   bookname = userInput.title
-    //   writer = userInput.name
-    // }
+    const userInput = JSON.parse(localStorage.getItem('data'));
+    if (userInput !== null) {
+        bookname.value = userInput.TitleID;
+        writer.value = userInput.writterid;
+    }
   });
+  
+  // Add to localStorage
+  storeFrom.addEventListener('input', () => {
+    object.TitleID = bookname.value;
+    object.writterid = writer.value;
+    localStorage.setItem('data', JSON.stringify(object));
+  });
+  
+
   

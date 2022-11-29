@@ -24,7 +24,7 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/microverseinc/readme-template/master/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <!-- <img src="https://raw.githubusercontent.com/microverseinc/readme-template/master/murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <br/>
 
 </div>
@@ -37,19 +37,19 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
+  <!-- - [Install](#install)
+  - [Usage](#usage) -->
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
+<!-- - [🙏 Acknowledgements](#acknowledgements) -->
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
@@ -122,26 +122,25 @@ To get a local copy up and running, follow these steps. -->
 
 In order to run this project you need:
 
-Web browser i.e chrome
-<!-- Example command:
+- Web browser i.e chrome
+- Run the following command: -->
+
+Command:
 
 ```sh
- gem install rails
-``` -->
+      sudo apt install nodejs npm
+```
 
-<!-- 
+
 ### Setup
 
 Clone this repository to your desired folder: -->
 
-<!--
-Example commands:
+Commands:
 
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com/shakespear95/Awesome-books.git
 ```
---->
 
 <!-- ### Install
 
@@ -168,29 +167,26 @@ Example command:
 ```
 --->
 
-<!-- ### Run tests
+### Run tests
 
 To run tests, run the following command: -->
 
-<!--
-Example command:
+Command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+    npx eslint .
 ```
---->
+-
 
-<!-- ### Deployment
+### Deployment
 
 You can deploy this project using: -->
 
-<!--
 Example:
 
 ```sh
-
+      npm run
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,17 +210,17 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+FUTURE FEATURES -->
 
-<!-- ## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+<!-- > Describe 1 - 3 features you will add to the project. -->
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]** -->
-<!-- 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+- [ ] **[CSS to make the site more interactive and beautiful]**
+- [ ] **[Contact Page: to put our contact details as the organisation that built the site]**
+- [ ] **[List page: to show all the books in one page]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 

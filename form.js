@@ -17,7 +17,8 @@ function Book(title, name, node = null) {
 
 const updateStorage = () => {
   let string = '';
-  books.forEach((book) => {
+  books.forEach((book, index) => {
+    book.id = index;
     string = `${string}${JSON.stringify(book)}|`;
   });
   string = string.substring(0, string.length - 1);
@@ -35,9 +36,10 @@ const createBooksElements = (book) => {
       if (b.id === book.id) {
         const i = Bookscontainer.removeChild(books[books.indexOf(b)].node);
         books.splice(i, 1);
-        updateStorage();
       }
     });
+
+    updateStorage();
   });
   const line = document.createElement('hr');
 
